@@ -10,17 +10,17 @@ module.exports = function(grunt) {
         src: [
             'src/js/*.js', // All JS in the libs folder
         ],
-        dest: 'js/build/application.js',
+        dest: 'build/js/application.js',
       } 
     },
 
     //Minifica
     uglify: {
       build: {
-        src: 'build/application.js',
-        dest: 'build/application.min.js'
+        src: 'build/js/application.js',
+        dest: 'build/js/application.min.js'
       }
-    }
+    },
 
     sass: {
       dist: {
@@ -31,13 +31,41 @@ module.exports = function(grunt) {
           'build/css/style.css': 'src/css/style.scss'
         }
       } 
-    }
+    },
+
+    processhtml: {
+      dist: {
+        options: {
+          process: true,
+          data: {
+            title: 'My SpotifyPlayer',
+            message: 'Just learning!'
+          }
+        },
+        files: {
+          'build/index.html': ['src/index.html']
+        }
+      }
+    },
 
     //Automate el save
     watch: {
-      options: {
-        livereload: true,
+
+      livereload: {
+        files: ['build/**/*'],
+        options: {
+          livereload: true,
+        },
       },
+
+      html: {
+        files: ['src/index.html'],
+        tasks: ['processhtml'],
+        options: {
+          spawn: false,
+        },
+      },
+
       css: {
         files: ['src/css/*.scss'],
         tasks: ['sass'],
@@ -45,13 +73,16 @@ module.exports = function(grunt) {
           spawn: false,
         }
       },
+
       scripts: {
         files: ['src/js/*.js'],
         tasks: ['concat', 'uglify'],
         options: {
           spawn: false,
         },
-      } 
+      }
+
+
     }
 
 
@@ -62,8 +93,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-processhtml');
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
+
+
   grunt.registerTask('default', ['watch']);
 
 };
