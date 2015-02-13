@@ -4,10 +4,10 @@
 
 
 /*------------------------------------*\
-$STYLE
+$SITE
 \*------------------------------------*/
 
-@import "variables.scss";
-@import "naoise.scss";
-@import "site.scss";
 
+body {
+	background-image: url(../img/background.jpg);
+}
