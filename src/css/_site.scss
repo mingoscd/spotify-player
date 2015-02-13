@@ -10,4 +10,42 @@ $SITE
 
 body {
 	background-image: url(../img/background.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.search {
+	background-color: $bgcolor;
+	padding: 2%;
+}
+
+.main-content {
+	margin-top: 20%;
+}
+
+.widget {
+	@include vendor(box-shadow, 0px 0px 20px 5px rgba(0,0,0,.6));
+}
+
+.list-of-songs {
+	display: none;
+	background-color: $bgcolor;
+	list-style-type: none;
+	margin: 0;
+	padding: 2% 3%;
+}
+
+.js-list-of-songs {
+	display: block;
+}
+
+
+
+
+hr {
+    border: 0;
+    height: 1px;
+    @include gradient_horizontal(rgba(0,0,0,0), rgba(0,0,0,.75), rgba(0,0,0,0));
 }

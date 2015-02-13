@@ -4,10 +4,10 @@
 		<meta charset="UTF-8">
 		<title>Spotify Player</title>
 		<link rel="stylesheet" href="css/style.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
 	<body>
-		<section>
+		<section class="main-content">
 			<div class="widget">
 				<div class="header">
 					<div class="btn-play disabled">			
@@ -25,12 +25,8 @@
 				</div>
 				
 				<div class="search">
-					<div id="wrap">
-  					<form action="" autocomplete="on">
-  						<input id="search" name="search" type="text" placeholder="What're we looking for ?">
-  						<input id="search_submit" value="Rechercher" type="submit">
-  					</form>
-					</div>
+						<input type="search" placeholder="Search your song" class="search_input" autofocus>
+						<input type="submit" class="search_submit">
 				</div>
 
 				<div class="cover">
@@ -39,7 +35,13 @@
 
 				<audio id="audio"></audio>
 
+				<ul id="songs-list" class="list-of-songs">
+				</ul>
 			</div>
+
 		</section>
+
+
+		<script src="js/application.js"></script>
 	</body>
 </html>

@@ -17,7 +17,7 @@ $NAOISE
 
 .header {
   height: 78px;
-  background-color: #ccc;
+  background-color: $bgcolor;
   position: relative;
   font-size: 12px;
 }
@@ -28,7 +28,7 @@ $NAOISE
   height: 60px;
   float: left;
   border-radius: 50px;
-  border: 1px solid #3c3c3c;
+  border: 1px solid $secondary;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -45,7 +45,7 @@ $NAOISE
   top: -18px;
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
-  border-left: 30px solid #3c3c3c;
+  border-left: 30px solid $secondary;
 }
 
 .btn-play:hover {
@@ -64,7 +64,7 @@ $NAOISE
 .btn-play.playing:before, .btn-play.playing:after {
   width: 9px;
   height: 36px;
-  background-color: #3c3c3c;
+  background-color: $bgcolor;
   position: absolute;
   content: "";
   top: 22px;
