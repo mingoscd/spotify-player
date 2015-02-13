@@ -1,3 +1,18 @@
+.widget {
+  width: 300px;
+  margin: 10px auto 0;
+  border-radius: 5px;
+  overflow: hidden;
+  display: block;
+}
+
+.header {
+  height: 78px;
+  background-color: #ccc;
+  position: relative;
+  font-size: 12px;
+}
+
 .btn-play {
   margin: 9px;
   width: 60px;
@@ -102,6 +117,7 @@
 
 .cover {
   height: 300px;
+  width: 300px;
   position: relative;
 }
 

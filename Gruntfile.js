@@ -51,6 +51,7 @@ module.exports = function(grunt) {
     //Automate el save
     watch: {
 
+      // Activar en tu navegador el uso de esta extensión en local
       livereload: {
         files: ['build/**/*'],
         options: {
