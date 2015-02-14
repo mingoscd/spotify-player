@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Spotify Player</title>
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	</head>
+	<body>
+		<section class="main-content">
+			<div class="widget shadow">
+				<div class="header">
+
+					<div class="btn-container">
+						<div class="btn-play disabled">	
+							<span></span>		
+						</div>	
+					</div>
+
+					<div class="metadata">
+						<p class="title">Song title</p>
+						<p class="author">Song author</p>
+
+						<div class="seekbar">
+							<progress class="progress-bar" value="1" max="30"></progress>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="search">
+						<input type="search" placeholder="Search your song" class="search_input" autofocus>
+						<button class="search_submit search-button"><span class="icon-music"></span></button>
+				</div>
+
+				<div class="cover">
+					<img class="song-bg" src="img/musica.jpg">
+				</div>
+
+				<audio id="audio" autoplay></audio>
+
+				<ul id="songs-list" class="list-of-songs">
+				</ul>
+			</div>
+		</section>
+
+		<section class="container-team">
+			<aside class="team shadow">
+				<h4><span class="icon-users"> Pair Programming</span></h4>
+				<hr>
+				<ul>
+					<li class="members">
+						<a class="linkedin" href="http://linkedin.com/in/hectorleonsuarez/en" target="_blank">
+							<span>Front-end Developer</span>
+							<br>
+							<span class="icon-linkedin"> Héctor león</span>
+						</a>
+					</li>
+					<br>
+					<li>
+						<a class="linkedin" href="http://linkedin.com/in/domingocividanes/en" target="_blank">
+							<span>Back-end Developer</span>
+							<br>
+							<span class="icon-linkedin"> Domingo Cividanes</span>
+						</a>
+					</li>
+				</ul>		
+			</aside>
+		</section>
+
+		<script src="js/application.js"></script>
+	</body>
+</html>
