@@ -8,5 +8,17 @@ $VARIABLES
 \*------------------------------------*/
 
 
-$bgcolor: rgb(204,204,204);
+// $bgcolor: rgb(204,204,204);
+$bgcolor: rgba(204,204,204,.6);
 $secondary:	rgb(60,60,0);
+$linkcolor: rgb(50,50,50);
+$linkcolorhover: rgb(200,100,100);
+$linkactive: rgb(230,0,0);
+$white: rgb(255,255,255);
+$black: rgb(0,0,0);
+$lightergrey: rgb(136,136,136);
+$semiopacity: rgba(255,255,255,.3);
+
+// $('.play').click(function(){
+//   $(this).toggleClass('active');
+// });

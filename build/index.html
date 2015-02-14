@@ -8,9 +8,13 @@
 	</head>
 	<body>
 		<section class="main-content">
-			<div class="widget">
+			<div class="widget shadow">
 				<div class="header">
-					<div class="btn-play disabled">			
+
+					<div class="btn-container">
+						<div class="btn-play disabled">	
+							<span></span>		
+						</div>	
 					</div>
 
 					<div class="metadata">
@@ -18,7 +22,7 @@
 						<p class="author">Song author</p>
 
 						<div class="seekbar">
-							<progress value="1" max="30"></progress>
+							<progress class="progress-bar" value="1" max="30"></progress>
 						</div>
 
 					</div>
@@ -26,21 +30,43 @@
 				
 				<div class="search">
 						<input type="search" placeholder="Search your song" class="search_input" autofocus>
-						<input type="submit" class="search_submit">
+						<button class="search_submit search-button"><span class="icon-music"></span></button>
 				</div>
 
 				<div class="cover">
-					<img src="img/musica.jpg">
+					<img class="song-bg" src="img/musica.jpg">
 				</div>
 
-				<audio id="audio"></audio>
+				<audio id="audio" autoplay></audio>
 
 				<ul id="songs-list" class="list-of-songs">
 				</ul>
 			</div>
-
 		</section>
 
+		<section class="container-team">
+			<aside class="team shadow">
+				<h4><span class="icon-users"> Pair Programming</span></h4>
+				<hr>
+				<ul>
+					<li class="members">
+						<a class="linkedin" href="//linkedin.com/in/hectorleonsuarez/en" target="_blank">
+							<span>Front-end Developer</span>
+							<br>
+							<span class="icon-linkedin"> Héctor león</span>
+						</a>
+					</li>
+					<br>
+					<li>
+						<a class="linkedin" href="//linkedin.com/in/domingocividanes/en" target="_blank">
+							<span>Back-end Developer</span>
+							<br>
+							<span class="icon-linkedin"> Domingo Cividanes</span>
+						</a>
+					</li>
+				</ul>		
+			</aside>
+		</section>
 
 		<script src="js/application.js"></script>
 	</body>

@@ -1,0 +1,99 @@
+
+
+
+
+
+
+
+/*------------------------------------*\
+$SITE
+\*------------------------------------*/
+
+// SEARCH BUTTON
+
+.search-button {
+  border-radius: 50%;
+  border: 1px solid $lightergrey;
+  padding: 3%;
+  color: $lightergrey;
+  cursor: pointer;
+  &:hover {
+    background-color: $semiopacity;
+  }
+}
+
+
+
+// PLAY PAUSE BUTTON
+
+.btn-container {
+  margin: 9px;
+  width: 60px;
+  height: 60px;
+  float: left;
+  border-radius: 50px;
+  border: 1px solid $lightergrey;
+  user-select: none;
+  &:hover {
+    background-color: $semiopacity;
+  }
+  
+}
+
+.btn-play {
+  width: 60px;
+  height: 60px;
+  span:before, span:after {
+    @include vendor(transition, all .5s);
+  }
+}
+
+.btn-play span:before {
+  content: '';
+  height: 0px;
+  width: 0px;
+  background: transparent;
+  border-right-width: 0;
+  border-left-color: $lightergrey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -10px;
+}
+.btn-play span:after {
+  content: '';
+  height: 0px;
+  width: 0px;
+  background: transparent;
+  border: 20px transparent solid;
+  border-right-width: 0;
+  border-left-color: $lightergrey;
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  margin: -20px 0 0 -10px;
+}
+.btn-play.active {
+  width: 60px;
+  height: 60px;
+  left: 50%;
+}
+
+.btn-play.active span:before {
+  content: '';
+  border: 5px $lightergrey solid;
+  border-top-width: 40px;
+  border-bottom-width: 0;
+  left: 11.5%;
+  @include vendor(transform, rotate(360deg));
+
+}
+.btn-play.active span:after {
+  content: '';
+  border: 5.333333333333333px $lightergrey solid;
+  border-bottom-width: 0;
+  border-top-width: 40px;
+  left: 18%;
+  @include vendor(transform, rotate(-360deg));
+
+}
